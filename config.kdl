@@ -21,8 +21,6 @@ input {
 
     trackpoint {
     }
-
-    // focus-follows-mouse max-scroll-amount="0%"
 }
 
 layout {
@@ -62,6 +60,7 @@ layout {
 
 spawn-at-startup "waybar" 
 spawn-at-startup "xwayland-satellite"
+spawn-at-startup "swaybg" "-i" "/home/cjvnjde/.config/niri/asstets/bg.jpg"
 
 screenshot-path "~/Pictures/screenshot_%Y-%m-%d %H-%M-%S.png"
 
