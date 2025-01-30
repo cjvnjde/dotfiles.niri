@@ -1,7 +1,7 @@
 workspace "dev"
-workspace "browser"
-workspace "other"
-workspace "chat"
+workspace "web"
+workspace "3"
+workspace "social"
 
 input {
     keyboard {
@@ -31,6 +31,7 @@ layout {
         proportion 0.33333
         proportion 0.5
         proportion 0.66667
+        proportion 1.0
     }
 
     preset-window-heights {
@@ -62,7 +63,7 @@ spawn-at-startup "waybar"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "swaybg" "-i" "/home/cjvnjde/.config/niri/asstets/bg.jpg"
 
-screenshot-path "~/Pictures/screenshot_%Y-%m-%d %H-%M-%S.png"
+screenshot-path "~/Pictures/Screenshots/screenshot_%Y-%m-%d %H-%M-%S.png"
 
 animations {
     workspace-switch {
@@ -173,4 +174,8 @@ binds {
 
 environment {
     DISPLAY ":0"
+}
+
+hotkey-overlay {
+    skip-at-startup
 }
