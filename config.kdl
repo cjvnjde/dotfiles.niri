@@ -1,3 +1,8 @@
+workspace "dev"
+workspace "browser"
+workspace "other"
+workspace "chat"
+
 input {
     keyboard {
         xkb {
@@ -56,6 +61,7 @@ layout {
 }
 
 spawn-at-startup "waybar" 
+spawn-at-startup "xwayland-satellite"
 
 screenshot-path "~/Pictures/screenshot_%Y-%m-%d %H-%M-%S.png"
 
@@ -164,4 +170,8 @@ binds {
     Alt+Print { screenshot-window; }
 
     Mod+Shift+E { quit; }
+}
+
+environment {
+    DISPLAY ":0"
 }
