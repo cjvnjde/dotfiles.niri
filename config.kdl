@@ -21,6 +21,8 @@ input {
 
     trackpoint {
     }
+
+    focus-follows-mouse max-scroll-amount="0%"
 }
 
 layout {
@@ -71,11 +73,19 @@ animations {
     }
 }
 
+// Firefox Picture-in-Picture should be floating
 window-rule {
     match app-id=r#"firefox"# title="^Picture-in-Picture$"
     open-floating true
 }
 
+// Webstorm Settings and pupops should be floating
+window-rule {
+    match app-id=r#"webstorm"# 
+    match title="^win[0-9]+$"
+    match title="^Settings$"
+    open-floating true
+}
 
 window-rule {
     geometry-corner-radius 5 5 0 0
