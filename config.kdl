@@ -61,11 +61,11 @@ layout {
     }
 }
 
-spawn-at-startup "waybar" 
+spawn-at-startup "/home/cjvnjde/.config/waybar/start-waybar.sh" "-t" "niri"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "swaybg" "-i" "/home/cjvnjde/.config/niri/asstets/bg.jpg"
 
-screenshot-path "~/Pictures/Screenshots/screenshot_%Y-%m-%d %H-%M-%S.png"
+screenshot-path "/home/cjvnjde/Pictures/Screenshots/screenshot_%Y-%m-%d %H-%M-%S.png"
 
 animations {
     workspace-switch {
@@ -81,9 +81,13 @@ window-rule {
 
 // Webstorm Settings and pupops should be floating
 window-rule {
-    match app-id=r#"webstorm"# 
-    match title="^win[0-9]+$"
-    match title="^Settings$"
+    match app-id=r#"webstorm"# title="^win[0-9]+$"
+    match app-id=r#"webstorm"# title="^Settings$"
+    match app-id=r#"webstorm"# title="^Confirm Exit$"
+    match app-id=r#"webstorm"# title="^Open File or Project$"
+    match app-id=r#"webstorm"# title="^New Project$"
+    match app-id=r#"webstorm"# title="^Clone Repository$"
+    match app-id=r#"webstorm"# title="^Destination Directory$"
     open-floating true
 }
 
